@@ -1,0 +1,101 @@
+image: 'node:16'
+definitions:
+  steps:
+    - step: &dep_install
+        name: Installing dependencies
+        runs-on:
+          - self.hosted
+          - linux.shell
+          - super4
+        caches:
+          - node
+        script:
+          - npm install --legacy-peer-deps --arch=x64 --platform=linux
+
+    - step: &lint
+        name: Lint | Covering and protecting injuries 
+        runs-on:
+          - self.hosted
+          - linux.shell
+          - super4
+        script:
+          - npm run lint:fix
+        caches:
+          - node
+
+    - step: &build
+        name: Preparing build
+        script:
+          - npm run build
+        artifacts:
+          - build/**
+        caches:
+          - node
+
+    - step: &build-staging
+        name: Preparing build for staging
+        script:
+          - npm run build:staging
+        artifacts:
+          - build/**
+        caches:
+          - node
+
+    - step: &build-prod
+        name: Preparing build for production
+        script:
+          - echo "REACT_APP_BASE_URL=$PROD_BASE_URL" > .env
+          - npm run build:prod
+        artifacts:
+          - build/**
+        caches:
+          - node
+
+    - step: &deploy-staging
+        name: Deploy app on staging
+        runs-on:
+          - self.hosted
+          - linux.shell
+          - super4
+        deployment: staging
+        script:
+          - sh ./.aws/setup.sh $STAGING_SSH_SECRET
+          - sh ./.aws/deploy.sh staging-dashboard-interface $STAGING_INTERFACE_INVALIDATION
+        caches:
+          - node
+
+    - step: &deploy-prod
+        name: Deploy app on production
+        runs-on:
+          - self.hosted
+          - linux.shell
+          - super4
+        deployment: production
+        script:
+          - export ENVIRONMENT="production"
+          - sh ./.aws/setup.sh 
+          - sh ./.aws/deploy.sh production-dashboard-interface $PROD_INTERFACE_INVALIDATION
+        caches:
+          - node
+          
+pipelines:
+  default:
+    - parallel:
+        - step: *dep_install
+        - step: *lint
+  branches:
+    '*':
+      - step: *dep_install
+      - step: *lint
+
+    staging:
+      - step: *dep_install
+      - step: *lint
+      - step: *build-staging
+      - step: *deploy-staging
+
+    production:
+      - step: *dep_install
+      - step: *lint
+      - step: *build-prod
+      - step: *deploy-prod
