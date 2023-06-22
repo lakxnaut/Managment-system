@@ -53,10 +53,15 @@ const LoginPage = (props) => {
         <div className='wrapper'>
             <section className='login-content'>
                 <div className='container h-100'>
-                    <div className='row align-items-center justify-content-center h-100 '>
+                    <div className='ml-5 row align-items-center justify-content-center h-100 '>
                         <div className='col-12'>
                             <div className='row align-items-center'>
                                 <div className=' col-lg-6 align-items-center justify-content-center'>
+                                    <img
+                                        src='assets/images/pfizer.jpeg'
+                                        className='img-fluid w-80'
+                                        alt=''
+                                    />
                                     <h2 className='mb-2'>Sign In</h2>
                                     <p>
                                         To Keep connected with us please login with your personal
@@ -125,13 +130,13 @@ const LoginPage = (props) => {
                                         </p> */}
                                     </form>
                                 </div>
-                                <div className='col-lg-6 mb-lg-0 mb-5 mt-lg-0 mt-4'>
+                                {/* <div className='col-lg-6 mb-lg-0 mb-5 mt-lg-0 mt-4'>
                                     <img
                                         src='assets/images/pfizer.jpeg'
                                         className='img-fluid w-80'
                                         alt=''
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

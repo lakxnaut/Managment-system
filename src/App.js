@@ -11,6 +11,8 @@ import UnutilizedReport from './screens/UnutilizedReport';
 import FileUploader from './screens/FileUploader';
 import Department from './screens/Department';
 import SidebarView from './screens/Structure/Sidebar';
+import AccountScreen from './screens/AccountScreen';
+import ItScreen from './screens/ItScreen';
 
 
 // import { Outlet } from "react-router-dom";
@@ -32,10 +34,6 @@ function App() {
     }
 
 
-
-
-
-
     return (
 
         <div>
@@ -53,6 +51,9 @@ function App() {
                         <Route path='/file_upload' element={<Protected Component={FileUploader} />} />
 
                         <Route path='/add_department' element={<Protected Component={Department} />} />
+                        <Route path='/account_department' element={<Protected Component={AccountScreen} />} />
+                        <Route path='/it_department' element={<Protected Component={ItScreen} />} />
+                        
 
                     </Routes>
                     <FooterView />

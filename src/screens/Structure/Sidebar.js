@@ -71,14 +71,14 @@ function SidebarView() {
                                     data-parent='#iq-sidebar-toggle'
                                 >
                                     <li className=' '>
-                                        <Link to={'/add_department'}>
+                                        <Link to={'/account_department'}>
                                             <i className='lab la-rocketchat'></i>
                                             <span>Accounts Department</span>
                                         </Link>
                                     </li>
                                      
                                     <li className=' '>
-                                        <Link to={'/add_department'}>
+                                        <Link to={'/it_department'}>
                                             <i className='las la-check-double'></i>
                                             <span>IT Department</span>
                                         </Link>
