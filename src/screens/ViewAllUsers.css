@@ -9,6 +9,8 @@ th {
   text-align: center;
 }
 
+
+
 .pagination {
     padding: 10px;
     margin: 15px 0;
@@ -1371,7 +1373,7 @@ legend {
 }
 
 .uploader_h4 {
-    font-size: 44px;
+    font-size: 50px;
     font-family: 'Dm Sans';
     color: black;
     font-weight: 800;
@@ -1381,4 +1383,69 @@ legend {
 .uploader_table {
     color: black;
 
+}
+
+.login-screen {
+    display: flex;
+    gap: 34px;
+    background-color: #fcfafa;
+    padding: 14vh 24px;
+    border-radius: 12px;
+    /* box-shadow: 5px 10px #888888; */
+    border: 2px solid rgb(223, 223, 223);
+}
+
+.hr-line-fucking {
+    border-left: 1px solid rgb(168, 168, 168);
+    height: 400px;
+    box-shadow: #dedede;
+}
+
+.hr-before-line {
+    display: flex;
+    gap: 72px;
+}
+
+.input-login-screen {
+    background-color: #f0f0f0;
+    height: 72px;
+    width: 392px;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    
+}
+
+.login-button-fuck-yeah {
+    border: none;
+    background-color: rgb(68, 130, 255);
+    color: white;
+    padding: 21px 38px;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+* {
+    font-family: 'Dm Sans';
+}
+
+.login-content{
+    background-color:rgb(0 152 220 / 61%) ;
+}
+
+.my-table{
+    font-weight: bolder;
+}
+
+/* .iq-sidebar {
+    position: absolute !important;
+}
+
+#sidebar-bottom{
+    position: relative !important ;
+    bottom: 20;
+} */
+
+.my-department{
+    margin-bottom: 33rem;
 }

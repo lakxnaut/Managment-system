@@ -20,13 +20,13 @@ function SidebarView() {
                 <div className='iq-sidebar-logo d-flex align-items-center justify-content-between'>
                     <Link to='/' className='police_div'>
 
-                        <img
+                        {/* <img
                             src='assets/images/pfizer.jpeg'
                             className='img-fluid rounded-normal light-logo'
                             alt='logo'
-                        />
+                        /> */}
 
-                        <h2 className='UP_Police'>Management System</h2>
+                        {/* <h2 className='UP_Police'>Management System</h2> */}
                     </Link>
                     <div className='iq-menu-bt-sidebar'>
                         <i className='las la-bars wrapper-menu'></i>
@@ -40,7 +40,7 @@ function SidebarView() {
 
                             <li className=''>
                                 <Link
-                                    to={'/'}
+                                    to={'/report'}
                                     className='collapsed'
                                     data-toggle='collapse'
                                 >
@@ -53,7 +53,7 @@ function SidebarView() {
 
 
 
-                            <li className=' '>
+                            <li className='my-department'>
                                 <a
                                     href='#slidetable'
                                     className='collapsed'
@@ -95,6 +95,18 @@ function SidebarView() {
 
                         </ul>
                     </nav>
+
+                    <div id="sidebar-bottom" className="position-relative sidebar-bottom">
+                      
+                             
+                        <div className="sidebarbottom-content">
+                            <div className="image"><img src="assets/images/pfizer.png" className="img-fluid"
+                                alt="side-bkg" /></div>
+                                   
+                          
+                           
+                        </div>
+                    </div>
 
                     <div className='p-3'></div>
                 </div>

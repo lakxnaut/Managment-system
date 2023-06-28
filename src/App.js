@@ -13,6 +13,7 @@ import Department from './screens/Department';
 import SidebarView from './screens/Structure/Sidebar';
 import AccountScreen from './screens/AccountScreen';
 import ItScreen from './screens/ItScreen';
+import DashboardPage from './screens/Dashboard';
 
 
 // import { Outlet } from "react-router-dom";
@@ -45,7 +46,8 @@ function App() {
 
                         <Route path='/login' element={<LoginPage topbar={setTopBar} />} />
 
-                        <Route path='/' element={<Protected Component={UnutilizedReport} />} />
+                        <Route path='/report' element={<Protected Component={UnutilizedReport} />} />
+                        <Route path='/' element={<Protected Component={DashboardPage} />} />
 
                         {/* <Route path='/file_upload' element={<Protected Component={FileUploader} />} /> */}
                         <Route path='/file_upload' element={<Protected Component={FileUploader} />} />

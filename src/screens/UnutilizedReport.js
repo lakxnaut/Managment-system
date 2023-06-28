@@ -26,6 +26,7 @@ export default function UnutilizedReport() {
         formData.append('fileName', xslFile);
         APICALLKARWA.PostXL(formData, 'exceltoJson').then((res) => {
             getAllData();
+            Notiflix.Notify.success('Data Uploaded Successfully');
         });
     };
 
@@ -140,14 +141,14 @@ export default function UnutilizedReport() {
                               data.map((mydata, i) => {
                                   return (
                                       <tr key={i}>
-                                          <td>{++i}</td>
-                                          <td>{mydata.Document_Type}</td>
-                                          <td>{mydata.Year}</td>
-                                          <td>{mydata.Doc_NO}</td>
-                                          <td>
-                                              <img src={mydata.Image} width={200} />
+                                          <td className='my-table'>{++i}</td>
+                                          <td className='my-table'>{mydata.Document_Type}</td>
+                                          <td className='my-table'>{mydata.Year}</td>
+                                          <td className='my-table'>{mydata.Doc_NO}</td>
+                                          <td className='my-table'>
+                                              <img src={mydata.Image} width={200} height={150} />
                                           </td>
-                                          <td>
+                                          <td className='my-table'>
                                               <button
                                                   type="button" 
                                                   className="btn btn-primary btn-lg"

@@ -4804,7 +4804,8 @@ button.bg-skyblue:focus {
   align-items: flex-end !important; }
 
 .align-items-center {
-  align-items: center !important; }
+  align-items: center !important; 
+  justify-content: center ;}
 
 .align-items-baseline {
   align-items: baseline !important; }
@@ -14395,19 +14396,22 @@ table.dataTable thead th {
   background-color: #fafbfe; }
 
 .table-bordered {
-  border: 1px solid #f1f1f1; }
+  border: 5px solid #f1f1f1; }
   .table-bordered td {
-    border: 1px solid #f1f1f1; }
+    border: 5px solid #f1f1f1; }
   .table-bordered th {
-    border: 1px solid #f1f1f1; }
+    border: 5px solid #f1f1f1; }
 
 .dataTables_wrapper .dataTables_filter {
+  font-size: 30px;
   color: #535f6b; }
 
 .dataTables_wrapper .dataTables_info {
-  color: #535f6b; }
+  color: #535f6b; 
+}
 
 .dataTables_wrapper .dataTables_length {
+  font-size: 20px;
   color: #535f6b; }
 
 .dataTables_wrapper .dataTables_paginate {
@@ -14445,10 +14449,10 @@ table.dataTable thead th {
     background: #dff6f8; }
 
 .dataTables_wrapper .dataTables_filter input {
-  border-color: #f1f1f1;
+  border-color: black;
   background-color: transparent;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
