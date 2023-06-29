@@ -1407,12 +1407,13 @@ legend {
 }
 
 .input-login-screen {
-    background-color: #f0f0f0;
+    background-color: #ebe7e7;
     height: 72px;
     width: 392px;
     border: none;
     padding: 12px;
     border-radius: 12px;
+    /* border: 0.rem solid blue; */
     
 }
 
@@ -1448,4 +1449,14 @@ legend {
 
 .my-department{
     margin-bottom: 33rem;
+}
+
+
+.my-heading {
+    font-size: 4rem;
+
+}
+
+.my-button{
+    background-color: blue;
 }

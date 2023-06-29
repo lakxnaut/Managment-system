@@ -126,7 +126,7 @@ function DashboardPage() {
                             <div className='col-lg-12'>
                                 <div>
                                     <div className='row'>
-                                        { role!='4' && <div className='col-md-4 '>
+                                        {/* { role!='4' && <div className='col-md-4 '>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <Link to='/view_all_users'>
                                                     <div className='card-body'>
@@ -149,13 +149,13 @@ function DashboardPage() {
                                                     </div>
                                                 </Link>
                                             </div>
-                                        </div>}
+                                        </div>} */}
                                         {role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
                                                         <h3 className='text-primary'>
-                                                            99
+                                                            1
                                                         </h3>
                                                         <div className='bg-primary icon iq-icon-box-2 mr-2 rounded rtl-mr-0  rtl-ml-2'>
                                                             <BsFillPersonCheckFill />
@@ -182,14 +182,14 @@ function DashboardPage() {
                                                 <Link to='/view_all_users'>
                                                     <div className='card-body'>
                                                         <div className='top-block d-flex align-items-center justify-content-between mb-3'>
-                                                            <h3 className='text-danger'>880</h3>
+                                                            <h3 className='text-danger'>12</h3>
                                                             <div className='bg-danger icon iq-icon-box-2 mr-2 rounded rtl-ml-2  rtl-mr-0'>
                                                                 <BsFillFileBreakFill />
                                                             </div>
                                                         </div>
                                                         <h4>Total</h4>
                                                         <div className='mt-1'>
-                                                            <p className='mb-0'>Files Uploaded</p>
+                                                            <p className='mb-0'>PDF Uploaded</p>
                                                         </div>
                                                         <div className='iq-progress-bar mt-3'>
                                                             <span
@@ -203,7 +203,7 @@ function DashboardPage() {
                                         </div>}
 
 
-                                        <div className="col-lg-12 mt-4">
+                                        {/* <div className="col-lg-12 mt-4">
                                             <div className="card">
                                                 <div className="card-header border-none">
                                                     <div className="header-title">
@@ -247,10 +247,10 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
  
                                        
-                                        { role!='4' && <div className='col-md-4'>
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -273,9 +273,9 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
+                                        </div>} */}
 
-                                        { role!='4' && <div className='col-md-4'>
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card '>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -298,8 +298,9 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <Link to='/upcoming_matches'>
                                                     <div className='card-body'>
@@ -324,8 +325,9 @@ function DashboardPage() {
                                                     </div>
                                                 </Link>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card '>
                                                 <Link to='/all_matches'>
                                                     <div className='card-body'>
@@ -350,8 +352,9 @@ function DashboardPage() {
                                                     </div>
                                                 </Link>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -374,8 +377,9 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -398,8 +402,9 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <Link to='/view_team'>
                                                     <div className='card-body'>
@@ -424,8 +429,9 @@ function DashboardPage() {
                                                     </div>
                                                 </Link>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -448,8 +454,9 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
-                                        { role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* { role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -472,8 +479,9 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
-                                        {role!='4' && <div className='col-md-4'>
+                                        </div>} */}
+
+                                        {/* {role!='4' && <div className='col-md-4'>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
                                                 <div className='card-body'>
                                                     <div className='top-block d-flex align-items-center justify-content-between mb-3'>
@@ -496,10 +504,10 @@ function DashboardPage() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>}
+                                        </div>} */}
                                         
 
-                                        <div className="col-lg-5">
+                                        {/* <div className="col-lg-5">
                                             <div className="card card-block card-stretch card-height rtl-card">
                                                 <div className="card-header border-none">
                                                     <div className="header-title">
@@ -542,7 +550,7 @@ function DashboardPage() {
 
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

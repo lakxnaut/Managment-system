@@ -65,11 +65,11 @@ const LoginPage = (props) => {
                                     <div className='hr-before-line'>
                                         <div className='hr-line-fucking'></div>
                                         <div className='login-screen-internal-1'>
-                                            <h2 className='mb-2'>Sign In</h2>
-                                            <p className='font-weight-bold'>
+                                            <h2 className='mb-2 my-heading'>Sign In</h2>
+                                            {/* <p className='font-weight-bold'>
                                                 To Keep connected with us please login with your
                                                 personal info.
-                                            </p>
+                                            </p> */}
                                             <form onSubmit={login}>
                                                 <div className='row'>
                                                     <div className='col-lg-12'>

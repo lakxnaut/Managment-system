@@ -61,7 +61,7 @@ export default function UnutilizedReport() {
                             <div className="col-lg-12 mb-3">
                                 <div className="d-flex align-items-center justify-content-between welcome-content">
                                     <div className="navbar-breadcrumb dashboard_div">
-                                        <h4 className="uploader_h4">Management System</h4>
+                                        <h4 className="uploader_h4">Accounts Department</h4>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@ export default function UnutilizedReport() {
                                             />
                                         </button>
 
-                                        <h3 className="uploader_h3">Add Image:</h3>
+                                        {/* <h3 className="uploader_h3">Add Image:</h3>
 
                                         <button className="uploader_btn">
                                             <input
@@ -91,7 +91,7 @@ export default function UnutilizedReport() {
                                                 multiple
                                                 onChange={(e) => handleImageUpload(e)}
                                             />
-                                        </button>
+                                        </button> */}
                                     </div>
                                 </div>
                             </div>
@@ -130,8 +130,8 @@ export default function UnutilizedReport() {
                                                             <th>S.No.</th>
                                                             <th>Document Type</th>
                                                             <th>Year</th>
-                                                            <th>Doc Number</th>
-                                                            <th>Image</th>
+                                                            <th>Unique Code</th>
+                                                            {/* <th>Image</th> */}
                                                             <th>Actions</th>
                                                         </tr>
                                                     </thead>
@@ -145,13 +145,13 @@ export default function UnutilizedReport() {
                                           <td className='my-table'>{mydata.Document_Type}</td>
                                           <td className='my-table'>{mydata.Year}</td>
                                           <td className='my-table'>{mydata.Doc_NO}</td>
-                                          <td className='my-table'>
+                                          {/* <td className='my-table'>
                                               <img src={mydata.Image} width={200} height={150} />
-                                          </td>
+                                          </td> */}
                                           <td className='my-table'>
                                               <button
                                                   type="button" 
-                                                  className="btn btn-primary btn-lg"
+                                                  className="btn bg-primary my-button btn-lg"
                                                   title='Edit'
                                                   onClick={() =>
                                                       setImage(mydata.Image)
@@ -160,16 +160,16 @@ export default function UnutilizedReport() {
                                                   data-toggle='modal'
                                                   data-target='#exampleModalScrollable'
                                               >
-                                                View Image
+                                                View 
                                               </button>
                                               {/* <br/> */}
-                                              <button
+                                              {/* <button
                                                   type="button" 
                                                   className="btn btn-primary btn-lg ml-2"
                                               >
                                                 Edit
 
-                                              </button>
+                                              </button> */}
                                           </td>
                                       </tr>
                                   );

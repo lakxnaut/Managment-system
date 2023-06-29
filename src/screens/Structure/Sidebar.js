@@ -40,12 +40,12 @@ function SidebarView() {
 
                             <li className=''>
                                 <Link
-                                    to={'/report'}
+                                    to={'/'}
                                     className='collapsed'
                                     data-toggle='collapse'
                                 >
                                     <MdOutlineCases className='dashboard_icons' />
-                                    <span>Report</span>
+                                    <span>Dashboard</span>
 
                                 </Link>
 
@@ -71,7 +71,7 @@ function SidebarView() {
                                     data-parent='#iq-sidebar-toggle'
                                 >
                                     <li className=' '>
-                                        <Link to={'/account_department'}>
+                                        <Link to={'/report'}>
                                             <i className='lab la-rocketchat'></i>
                                             <span>Accounts Department</span>
                                         </Link>
