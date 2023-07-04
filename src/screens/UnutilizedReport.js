@@ -9,8 +9,8 @@ export default function UnutilizedReport() {
     const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState([]);
     const [image, setImage] = useState('');
-    
     const Myprops = {width: 400, height: 250, zoomWidth: 500, img: image};
+    const chromeStaticUrl = 'chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///';
 
 
     useEffect(() => {
@@ -149,19 +149,11 @@ export default function UnutilizedReport() {
                                               <img src={mydata.Image} width={200} height={150} />
                                           </td> */}
                                           <td className='my-table'>
-                                              <button
-                                                  type="button" 
-                                                  className="btn bg-primary my-button btn-lg"
-                                                  title='Edit'
-                                                  onClick={() =>
-                                                      setImage(mydata.Image)
-                                                  }
-                                                  //   className='dropdown-item btn-primary'
-                                                  data-toggle='modal'
-                                                  data-target='#exampleModalScrollable'
-                                              >
-                                                View 
-                                              </button>
+                                               
+                                              <a className="btn bg-primary my-button btn-lg" href={`${chromeStaticUrl}${mydata.Path}/${mydata.Unique_Code}.pdf`} target="_blank" rel="noreferrer">View
+                                              </a>
+                                                 
+                                               
                                               {/* <br/> */}
                                               {/* <button
                                                   type="button" 
