@@ -16,6 +16,9 @@ import {
 } from 'react-icons/bs';
 
 import { MdOutlineCases } from 'react-icons/md';
+import { APICALLKARWA } from '../api/APICALLKRWA';
+
+
 
 function DashboardPage() {
     const [user, setUser] = useState();
@@ -33,6 +36,7 @@ function DashboardPage() {
     const [totalPlayers, setTotalPlayers] = useState();
     const [globalContest, setGlobalContest] = useState();
     const [amountReceived, setAmountReceived] = useState();
+    const [totalPDF, setTotalPDF] = useState();
     const [totalBankVerified, setTotalBankVerified] = useState();
     const [error, setError] = useState(true);
     const role = localStorage.getItem('role');
@@ -55,9 +59,9 @@ function DashboardPage() {
         dashboardInfo();
     }, []);
 
-    useEffect(() => {
-        allCasesSummary();
-    }, []);
+    // useEffect(() => {
+    //     dashboardCount()
+    // }, []);
 
     function save(data) {
         setUser(data.totalUser);
@@ -79,6 +83,9 @@ function DashboardPage() {
         // console.log(data)
     }
     const dashboardInfo = () => {
+        APICALLKARWA.DashboardCount().then((res)=>{
+            setTotalPDF(res.count);
+        });
         
     };
 
@@ -179,26 +186,26 @@ function DashboardPage() {
 
                                         { role!='4' && <div className='col-md-4 '>
                                             <div className='card card-block card-stretch card-height rtl-mode dashboard_card'>
-                                                <Link to='/view_all_users'>
-                                                    <div className='card-body'>
-                                                        <div className='top-block d-flex align-items-center justify-content-between mb-3'>
-                                                            <h3 className='text-danger'>12</h3>
-                                                            <div className='bg-danger icon iq-icon-box-2 mr-2 rounded rtl-ml-2  rtl-mr-0'>
-                                                                <BsFillFileBreakFill />
-                                                            </div>
-                                                        </div>
-                                                        <h4>Total</h4>
-                                                        <div className='mt-1'>
-                                                            <p className='mb-0'>PDF Uploaded</p>
-                                                        </div>
-                                                        <div className='iq-progress-bar mt-3'>
-                                                            <span
-                                                                className='bg-danger'
-                                                                data-percent='55'
-                                                            ></span>
+                                                 
+                                                <div className='card-body'>
+                                                    <div className='top-block d-flex align-items-center justify-content-between mb-3'>
+                                                        <h3 className='text-danger'>{totalPDF}</h3>
+                                                        <div className='bg-danger icon iq-icon-box-2 mr-2 rounded rtl-ml-2  rtl-mr-0'>
+                                                            <BsFillFileBreakFill />
                                                         </div>
                                                     </div>
-                                                </Link>
+                                                    <h4>Total</h4>
+                                                    <div className='mt-1'>
+                                                        <p className='mb-0'>PDF Uploaded</p>
+                                                    </div>
+                                                    <div className='iq-progress-bar mt-3'>
+                                                        <span
+                                                            className='bg-danger'
+                                                            data-percent='55'
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                               
                                             </div>
                                         </div>}
 

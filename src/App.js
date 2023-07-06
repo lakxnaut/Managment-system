@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, HashRouter  } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import { useState,useEffect } from 'react';
 import TopbarView from './screens/Structure/Topbar';
@@ -41,7 +41,7 @@ function App() {
             <div>
                 
                 <BrowserRouter>
-                    {isTopBar && role == 1 && <SidebarView />}
+                    {isTopBar && (role == 1 || role == 2) && <SidebarView />}
                     <Routes>
 
                         <Route path='/login' element={<LoginPage topbar={setTopBar} />} />

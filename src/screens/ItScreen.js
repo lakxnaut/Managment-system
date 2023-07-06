@@ -91,7 +91,7 @@ export default function ItScreen() {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {data &&
+                                                    {/* {data &&
                                                         data.length > 0 &&
                                                         data.map((data, i) => {
                                                             return (
@@ -111,7 +111,7 @@ export default function ItScreen() {
                                                                     </td>
                                                                 </tr>
                                                             );
-                                                        })}
+                                                        })} */}
                                                 </tbody>
                                             </table>
                                         </div>

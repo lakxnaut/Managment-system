@@ -12,6 +12,11 @@ export const APICALLKARWA = {
         return await BASEAPIS.GETAPI(url);
     },
 
+    DashboardCount: async () => {
+        return await BASEAPIS.GETAPI('dashboardCount');
+    },
+    
+
     PostImage: async (json,url) => {
         return await BASEAPIS.POSTAPIMULTIPARTS(json,url);
     },

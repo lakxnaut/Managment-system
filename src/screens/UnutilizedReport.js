@@ -11,13 +11,15 @@ export default function UnutilizedReport() {
     const [image, setImage] = useState('');
     const Myprops = {width: 400, height: 250, zoomWidth: 500, img: image};
     const chromeStaticUrl = 'chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///';
+    const role = localStorage.getItem('role');
 
 
     useEffect(() => {
-        console.log('first');
-        localStorage.setItem('first',true);
-        getAllData();
-    }, []);
+        setTimeout(() => {
+            localStorage.setItem('first',true);
+            getAllData();
+        },2000);
+    },[]);
   
 
     const handleUpload = async (xslFile) => {
@@ -66,23 +68,25 @@ export default function UnutilizedReport() {
                                 </div>
                             </div>
 
-                            <div className="card-body">
-                                <div className="table-responsive">
-                                    <div className="uploader_div">
-                                        <h3 className="uploader_h3">File Uploader: </h3>
-                                        <button className="uploader_btn">
-                                            <input
-                                                className="file_uploader_btn"
-                                                type="file"
-                                                name="myImage"
-                                                onChange={(event) => {
-                                                    console.log(event.target.files[0]);
-                                                    handleUpload(event.target.files[0]);
-                                                }}
-                                            />
-                                        </button>
+                            {
+                                role==1 && 
+                                <div className="card-body">
+                                    <div className="table-responsive">
+                                        <div className="uploader_div">
+                                            <h3 className="uploader_h3">File Uploader: </h3>
+                                            <button className="uploader_btn">
+                                                <input
+                                                    className="file_uploader_btn"
+                                                    type="file"
+                                                    name="myImage"
+                                                    onChange={(event) => {
+                                                        console.log(event.target.files[0]);
+                                                        handleUpload(event.target.files[0]);
+                                                    }}
+                                                />
+                                            </button>
 
-                                        {/* <h3 className="uploader_h3">Add Image:</h3>
+                                            {/* <h3 className="uploader_h3">Add Image:</h3>
 
                                         <button className="uploader_btn">
                                             <input
@@ -92,9 +96,9 @@ export default function UnutilizedReport() {
                                                 onChange={(e) => handleImageUpload(e)}
                                             />
                                         </button> */}
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div>}
 
                             <div className="col-lg-11">
                                 <div>

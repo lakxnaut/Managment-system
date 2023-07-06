@@ -3,6 +3,7 @@ const key = localStorage.getItem('jwtToken');
 
 export const BASEAPIS = {
     GETAPI: async (url) => {
+        console.log(baseURL + url);
         return await fetch(baseURL + url, {
             method: 'GET',
             headers: {

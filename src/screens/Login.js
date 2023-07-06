@@ -34,7 +34,7 @@ const LoginPage = (props) => {
 
     const login = (e) => {
         e.preventDefault();
-        if (name == '1234' && password == '1234') {
+        if (name == 'Super Admin' && password == 'super1234') {
             localStorage.setItem('loggedin', name);
             // localStorage.setItem('jwtToken', data.message);
             localStorage.setItem('role', 1);
@@ -42,7 +42,21 @@ const LoginPage = (props) => {
             localStorage.setItem('name', CallerName);
             props.topbar(true);
             navigate('/');
-        } else {
+        } 
+
+        else if(name == 'user' && password == 'user1234'){
+
+            localStorage.setItem('loggedin', name);
+            // localStorage.setItem('jwtToken', data.message);
+            localStorage.setItem('role', 2);
+            const CallerName = getName(name);
+            localStorage.setItem('name', CallerName);
+            props.topbar(true);
+            navigate('/');
+
+        }
+        
+        else {
             Notiflix.Notify.failure('Wrong Credentials');
         }
     };

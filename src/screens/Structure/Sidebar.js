@@ -61,7 +61,7 @@ function SidebarView() {
                                     aria-expanded='false'
                                 >
                                     <MdOutlineCases className='dashboard_icons' />
-                                    <span>Deparment</span>
+                                    <span>Department</span>
                                     <i className='las la-angle-right iq-arrow-right arrow-active'></i>
                                     <i className='las la-angle-down iq-arrow-right arrow-hover'></i>
                                 </a>
