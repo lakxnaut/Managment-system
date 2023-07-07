@@ -12,6 +12,7 @@
         "@testing-library/user-event": "^13.5.0",
         "antd": "^5.2.2",
         "bootstrap": "^5.2.3",
+        "electron-packager": "^17.1.1",
         "emoji-picker-react": "^3.5.1",
         "moment": "^2.29.4",
         "notiflix": "^3.2.5",

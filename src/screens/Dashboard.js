@@ -123,7 +123,7 @@ function DashboardPage() {
                                 <div className='d-flex align-items-center justify-content-between welcome-content'>
                                     <div className='navbar-breadcrumb dashboard_div'>
                                         <h4 className='mb-0 dashboard_welcome'>
-                                            Welcome, Lakshya <span className='wave'>👋</span>
+                                            Welcome, User <span className='wave'>👋</span>
                                         </h4>
                                     </div>
                                 </div>

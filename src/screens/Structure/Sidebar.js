@@ -100,7 +100,7 @@ function SidebarView() {
                       
                              
                         <div className="sidebarbottom-content">
-                            <div className="image"><img src="assets/images/pfizer.png" className="img-fluid"
+                            <div className="image"><img src="assets/images/pfizer.jpeg" className="img-fluid"
                                 alt="side-bkg" /></div>
                                    
                           

@@ -6,7 +6,7 @@ import { RotatingLines } from 'react-loader-spinner';
 import { APICALLKARWA } from '../api/APICALLKRWA';
 
 export default function UnutilizedReport() {
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
     const [image, setImage] = useState('');
     const Myprops = {width: 400, height: 250, zoomWidth: 500, img: image};
@@ -15,10 +15,8 @@ export default function UnutilizedReport() {
 
 
     useEffect(() => {
-        setTimeout(() => {
-            localStorage.setItem('first',true);
-            getAllData();
-        },2000);
+        localStorage.setItem('first',true);
+        getAllData();
     },[]);
   
 
@@ -45,7 +43,18 @@ export default function UnutilizedReport() {
 
     const getAllData = () => {
         APICALLKARWA.GetPoliceData('getPoliceData').then((res) => {
-            setData(res);
+            
+            setData(prev=>res);
+                
+           
+            setIsLoading(false);
+
+            
+        }).catch(e=>{
+            {
+                console.log('error');
+                setIsLoading(true);
+            }
         });
     };
 
@@ -140,7 +149,7 @@ export default function UnutilizedReport() {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {data &&
+                                                        { !isLoading && data &&
                               data.length > 0 &&
                               data.map((mydata, i) => {
                                   return (
